@@ -6,17 +6,15 @@ Built with the [Meltano Tap SDK](https://sdk.meltano.com) for Singer Taps.
 
 ## Installation
 
-- [ ] `Developer TODO:` Update the below as needed to correctly describe the install procedure. For instance, if you do not have a PyPi repo, or if you want users to directly install from your git repo, you can modify this step as appropriate.
+Install directly from the repo source using pip
 
 ```bash
-pipx install tap-hellobaton
+pip install git+https://github.com/dluftspring/tap-hellobaton.git
 ```
 
 ## Configuration
 
 ### Accepted Config Options
-
-- [ ] `Developer TODO:` Provide a list of config options accepted by the tap.
 
 A full list of supported settings and capabilities for this
 tap is available by running:
@@ -25,9 +23,16 @@ tap is available by running:
 tap-hellobaton --about
 ```
 
-### Source Authentication and Authorization
+You'll need to supply three major configurations in a  `config.json` file
 
-- [ ] `Developer TODO:` If your tap requires special access on the source system, or any special authentication requirements, provide those here.
+```json
+
+  {
+    "company": "<YOUR COMPANY>",
+    "api_key": "<YOUR API KEY>",
+    "user_agent": "<USER AGENT STRING>"
+  }
+```
 
 ## Usage
 
@@ -35,39 +40,18 @@ You can easily run `tap-hellobaton` by itself or in a pipeline using [Meltano](h
 
 ### Executing the Tap Directly
 
+To see a catalog of the available json schemas you can run the tap in discovery mode
+
 ```bash
 tap-hellobaton --version
 tap-hellobaton --help
-tap-hellobaton --config CONFIG --discover > ./catalog.json
+tap-hellobaton --config CONFIG_FILE_PATH --discover > ./catalog.json
 ```
 
-## Developer Resources
 
-- [ ] `Developer TODO:` As a first step, scan the entire project for the text "`TODO:`" and complete any recommended steps, deleting the "TODO" references once completed.
+### Running ELT with [Meltano](https://www.meltano.com)
 
-### Initialize your Development Environment
-
-```bash
-pipx install poetry
-poetry install
-```
-
-### Create and Run Tests
-
-Create tests within the `tap_hellobaton/tests` subfolder and
-  then run:
-
-```bash
-poetry run pytest
-```
-
-You can also test the `tap-hellobaton` CLI interface directly using `poetry run`:
-
-```bash
-poetry run tap-hellobaton --help
-```
-
-### Testing with [Meltano](https://www.meltano.com)
+TODO
 
 _**Note:** This tap will work in any Singer environment and does not require Meltano.
 Examples here are for convenience and to streamline end-to-end orchestration scenarios._
