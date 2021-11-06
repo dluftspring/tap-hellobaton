@@ -1,0 +1,46 @@
+{
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "_self": {
+            "type": "string"
+        },
+        "task": {
+            "type": "string"
+        },
+        "url": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string"
+        },
+        "label": {
+            "type": "string"
+        },
+        "deliverable": {
+            "type": "boolean"
+        },
+        "requires_approval": {
+            "type": "boolean"
+        },
+        "approved": {
+            "type": "boolean"
+        },
+        "revision_task": {
+            "type": "string"
+        },
+        "original_filename": {
+            "type": "string"
+        },
+        "created_by": {
+            "type": "string"
+        },
+        "created": {
+            "type": "string"
+        },
+        "modified": {
+            "type": "string"
+        }
+    }
+}

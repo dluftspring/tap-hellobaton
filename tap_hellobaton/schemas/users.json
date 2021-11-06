@@ -1,0 +1,46 @@
+{
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "_self": {
+            "type": "string"
+        },
+        "first_name": {
+            "type": "string"
+        },
+        "last_name": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string"
+        },
+        "account_type": {
+            "type": "string"
+        },
+        "job_title": {
+            "type": "string"
+        },
+        "company": {
+            "type": "string"
+        },
+        "avatar_url": {
+            "type": "string"
+        },
+        "created_by": {
+            "type": "string"
+        },
+        "signed_up_at": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "created": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "modified": {
+            "type": "string",
+            "format": "date-time"
+        }
+    }
+}

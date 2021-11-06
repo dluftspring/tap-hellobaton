@@ -1,0 +1,57 @@
+{
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "_self": {
+            "type": "string"
+        },
+        "user": {
+            "type": "string"
+        },
+        "created_by": {
+            "type": "string"
+        },
+        "project": {
+            "type": "string"
+        },
+        "task": {
+            "type": "string"
+        },
+        "rate": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "hourly_rate": {
+                    "type": "string"
+                }
+            }
+        },
+        "started_at": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "ended_at": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "reference_date": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "billable": {
+            "type": "boolean"
+        },
+        "calculated_duration": {
+            "type": "integer"
+        },
+        "inputted_duration": {
+            "type": "integer"
+        },
+        "notes": {
+            "type": "string"
+        }
+    }
+}
