@@ -25,7 +25,7 @@
             "type": "boolean"
         },
         "original_filename": {
-            "type": "string"
+            "type": ["string", "null"]
         },
         "created": {
             "type": "string",
