@@ -71,7 +71,7 @@
             "type": "string"
         },
         "finish_datetime": {
-            "type": "string",
+            "type": ["string", "null"],
             "format": "date-time"
         },
         "created_from": {
