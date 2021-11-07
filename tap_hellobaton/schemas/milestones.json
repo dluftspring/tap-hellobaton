@@ -78,7 +78,7 @@
             "type": ["string", "null"]
         },
         "duration": {
-            "type": "string"
+            "type": "integer"
         },
         "created": {
             "type": "string",
