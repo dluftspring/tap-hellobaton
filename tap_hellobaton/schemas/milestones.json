@@ -75,7 +75,7 @@
             "format": "date-time"
         },
         "created_from": {
-            "type": "string"
+            "type": ["string", "null"]
         },
         "duration": {
             "type": "string"
