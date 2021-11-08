@@ -55,7 +55,7 @@
       "type": "string"
     },
     "assigned_to": {
-      "type": "string"
+      "type": ["string", "null"]
     },
     "created_from": {
       "type": ["string", "null"]
