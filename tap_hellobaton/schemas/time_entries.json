@@ -34,7 +34,7 @@
             "format": "date-time"
         },
         "ended_at": {
-            "type": "string",
+            "type": ["string", "null"],
             "format": "date-time"
         },
         "reference_date": {
