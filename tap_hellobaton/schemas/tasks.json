@@ -52,7 +52,7 @@
       "type": "string"
     },
     "created_by": {
-      "type": ["string", "null"],
+      "type": ["string", "null"]
     },
     "assigned_to": {
       "type": ["string", "null"]
