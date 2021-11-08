@@ -62,7 +62,7 @@
             "type": ["string", "null"]
         },
         "phase": {
-            "type": "object",
+            "type": ["object", "null"],
             "properties": {
                 "id": {
                     "type": "integer"
