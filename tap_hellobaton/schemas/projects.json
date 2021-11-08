@@ -5,7 +5,7 @@
             "type": "string"
         },
         "annual_contract_value": {
-            "type": "integer"
+            "type": "string"
         },
         "attachment_list": {
             "type": "string"
