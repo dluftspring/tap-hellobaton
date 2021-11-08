@@ -50,7 +50,7 @@
             "type": "integer"
         },
         "implementation_budget": {
-            "type": "integer"
+            "type": "string"
         },
         "milestone_list": {
             "type": "string"
