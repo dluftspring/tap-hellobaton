@@ -37,7 +37,7 @@
             ]
         },
         "created_from_template": {
-            "type": "string"
+            "type": ["string", "null"]
         },
         "created_from": {
             "type": "string"
