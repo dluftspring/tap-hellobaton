@@ -55,7 +55,7 @@
             "format": "date-time"
         },
         "completed_datetime": {
-            "type": "string",
+            "type": ["string", "null"],
             "format": "date-time"
         },
         "client_systems": {
