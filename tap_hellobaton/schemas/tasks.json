@@ -58,7 +58,7 @@
       "type": "string"
     },
     "created_from": {
-      "type": "string"
+      "type": ["string", "null"]
     },
     "risk_profiles": {
       "type": "array",
