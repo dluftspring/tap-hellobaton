@@ -16,7 +16,7 @@
             "type": "string"
         },
         "task": {
-            "type": "string"
+            "type": ["string", "null"]
         },
         "rate": {
             "type": "object",
