@@ -19,7 +19,7 @@
       "type": "string"
     },
     "dependency": {
-      "type": "string"
+      "type": ["string", "null"]
     },
     "start_datetime": {
       "type": "string",
