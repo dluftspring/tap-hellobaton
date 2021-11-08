@@ -31,7 +31,7 @@
             "type": ["string", "null"]
         },
         "signed_up_at": {
-            "type": "string",
+            "type": ["string", "null"],
             "format": "date-time"
         },
         "created": {
