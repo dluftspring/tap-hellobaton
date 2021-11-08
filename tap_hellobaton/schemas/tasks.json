@@ -42,7 +42,7 @@
       "format": "date-time"
     },
     "finished_overridden_datetime": {
-      "type": "string",
+      "type": ["string", "null"],
       "format": "date-time"
     },
     "estimated_duration": {
