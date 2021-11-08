@@ -40,7 +40,7 @@
             "type": ["string", "null"]
         },
         "created_from": {
-            "type": "string"
+            "type": ["string", "null"]
         },
         "start_datetime": {
             "type": ["string", "null"],
