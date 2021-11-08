@@ -28,7 +28,7 @@
             "type": ["boolean", "null"]
         },
         "revision_task": {
-            "type": "string"
+            "type": ["string", "null"]
         },
         "original_filename": {
             "type": ["string", "null"]
