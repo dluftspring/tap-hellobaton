@@ -90,7 +90,7 @@
                 "type": "object",
                 "properties": {
                     "id": {
-                        "type": "string"
+                        "type": "integer"
                     },
                     "risk_score": {
                         "type": "number"
