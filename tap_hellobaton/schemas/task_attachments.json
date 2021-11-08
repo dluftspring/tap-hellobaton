@@ -25,7 +25,7 @@
             "type": "boolean"
         },
         "approved": {
-            "type": "boolean"
+            "type": ["boolean", "null"]
         },
         "revision_task": {
             "type": "string"
