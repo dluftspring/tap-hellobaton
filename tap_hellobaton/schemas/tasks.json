@@ -10,7 +10,7 @@
       "type": "string"
     },
     "description": {
-      "type": "string"
+      "type": ["string", "null"]
     },
     "project": {
       "type": "string"
