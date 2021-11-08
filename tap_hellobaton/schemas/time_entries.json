@@ -45,10 +45,10 @@
             "type": "boolean"
         },
         "calculated_duration": {
-            "type": "integer"
+            "type": ["integer", "null"]
         },
         "inputted_duration": {
-            "type": "integer"
+            "type": ["integer", "null"]
         },
         "notes": {
             "type": "string"
