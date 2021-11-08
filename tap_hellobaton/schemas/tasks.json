@@ -46,7 +46,7 @@
       "format": "date-time"
     },
     "estimated_duration": {
-      "type": "integer"
+      "type": ["integer", "null"]
     },
     "milestone": {
       "type": "string"
