@@ -84,7 +84,7 @@
             }
         },
         "creator": {
-            "type": "string"
+            "type": ["string", "null"]
         },
         "task_list": {
             "type": "string"

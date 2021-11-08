@@ -37,7 +37,7 @@
             "type": ["string", "null"]
         },
         "creator": {
-            "type": "string"
+            "type": ["string", "null"]
         },
         "deadline_datetime": {
             "type": ["string", "null"],
