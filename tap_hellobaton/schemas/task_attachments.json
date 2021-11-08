@@ -16,7 +16,7 @@
             "type": "string"
         },
         "label": {
-            "type": "string"
+            "type": ["string", "null"]
         },
         "deliverable": {
             "type": "boolean"
