@@ -13,7 +13,7 @@
             "type": "string"
         },
         "label": {
-            "type": "string"
+            "type": ["string", "null"]
         },
         "created_by": {
             "type": "string"
