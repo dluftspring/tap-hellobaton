@@ -40,7 +40,7 @@
             "type": "string"
         },
         "deadline_datetime": {
-            "type": "string",
+            "type": ["string", "null"],
             "format": "date-time"
         },
         "estimated_duration": {
