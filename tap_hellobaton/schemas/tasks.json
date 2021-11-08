@@ -22,7 +22,7 @@
       "type": ["string", "null"]
     },
     "start_datetime": {
-      "type": "string",
+      "type": ["string", "null"],
       "format": "date-time"
     },
     "due_datetime": {

@@ -43,7 +43,7 @@
             "type": "string"
         },
         "start_datetime": {
-            "type": "string",
+            "type": ["string", "null"],
             "format": "date-time"
         },
         "started_datetime": {
