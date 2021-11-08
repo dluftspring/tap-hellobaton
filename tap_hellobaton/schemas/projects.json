@@ -60,7 +60,7 @@
             "format": "date-time"
         },
         "phase": {
-            "type": "object",
+            "type": ["object", "null"]
             "properties": {
                 "id": {
                     "type": "integer"
