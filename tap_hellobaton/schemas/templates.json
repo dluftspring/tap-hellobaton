@@ -59,7 +59,7 @@
             "format": "date-time"
         },
         "client_systems": {
-            "type": "string"
+            "type": ["string", "null"]
         },
         "phase": {
             "type": "object",
