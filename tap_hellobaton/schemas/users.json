@@ -25,7 +25,7 @@
             "type": "string"
         },
         "avatar_url": {
-            "type": "string"
+            "type": ["string", "null"]
         },
         "created_by": {
             "type": ["string", "null"]
