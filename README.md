@@ -25,11 +25,11 @@ tap-hellobaton --about
 
 You'll need to supply three config parameters
 
-| Parameter | Type | Env Variable Alias |
-| :-------- | :--- | :----------------- |
-| company | string (required) | TAP_HELLOBATON_COMPANY |
-| api_key | string (required) | TAP_HELLOBATON_API_KEY |
-| user_agent | string (required) | TAP_HELLOBATON_USER_AGENT |
+| Parameter | Description | Type | Env Variable Alias |
+| :-------- | :---------- | :--- | :----------------- |
+| company | Your company instance used in the api url | string (required) | TAP_HELLOBATON_COMPANY |
+| api_key | Api key for authentication | string (required) | TAP_HELLOBATON_API_KEY |
+| user_agent | User agent to appear in monitoring jobs | string (optional) | TAP_HELLOBATON_USER_AGENT |
 
 You can set these parameters as environment variables or by specifying a json configuration file with the following info
 
