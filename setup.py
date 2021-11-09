@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='tap-hellobaton',
-    version='0.0.1',
+    version='0.0.2',
     description='Singer.io tap for extracting data from the Hello Baton API',
     author='Daniel Luftspring',
     py_modules=['tap_hellobaton'],
