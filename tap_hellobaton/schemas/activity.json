@@ -13,22 +13,37 @@
       "type": "string"
     },
     "parent": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "child": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "actor": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "project": {
       "type": "string"
     },
     "parent_type": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "child_type": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "meta": {
       "type": "string"
