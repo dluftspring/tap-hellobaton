@@ -75,3 +75,10 @@ class UsersStream(hellobatonStream):
     path = "/users/"
     primary_keys = ["id"]
     schema_filepath = SCHEMAS_DIR / "users.json"
+
+class ActivityStream(hellobatonStream):
+    """Define custom stream."""
+    name = "activity"
+    path = "/activity/"
+    primary_keys = ["id"]
+    schema_filepath = SCHEMAS_DIR / "activity.json"

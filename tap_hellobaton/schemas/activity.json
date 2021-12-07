@@ -1,0 +1,60 @@
+{
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "_self": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "group": {
+      "type": "string"
+    },
+    "parent": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "child": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "actor": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "project": {
+      "type": "string"
+    },
+    "parent_type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "child_type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "meta": {
+      "type": "string"
+    },
+    "created": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "modified": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

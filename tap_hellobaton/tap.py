@@ -15,7 +15,8 @@ from tap_hellobaton.streams import (
     TimeEntriesStream,
     UsersStream,
     TaskAttachmentsStream,
-    TemplatesStream
+    TemplatesStream,
+    ActivityStream
 )
 
 STREAM_TYPES = [
@@ -28,7 +29,8 @@ STREAM_TYPES = [
     TimeEntriesStream,
     UsersStream,
     TaskAttachmentsStream,
-    TemplatesStream
+    TemplatesStream,
+    ActivityStream
 ]
 
 class Taphellobaton(Tap):
