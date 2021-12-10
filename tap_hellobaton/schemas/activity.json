@@ -46,7 +46,10 @@
       ]
     },
     "meta": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+        ]
     },
     "created": {
       "type": "string",
