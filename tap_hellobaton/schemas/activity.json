@@ -47,7 +47,7 @@
     },
     "meta": {
       "type": [
-        "string",
+        "object",
         "null"
         ]
     },
