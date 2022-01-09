@@ -9,7 +9,8 @@ setup(
     install_requires=[
         'singer-sdk>=0.3.9',
         'requests>=2.26.0',
-        'urllib3>=1.26.7'
+        'urllib3>=1.26.7',
+        'jsonschema>=3.2.0'
     ],
     entry_points='''
         [console_scripts]
