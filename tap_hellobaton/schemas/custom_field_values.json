@@ -27,7 +27,7 @@
             }
         },
         "value_numeric": {
-            "type": ["integer", "null"]
+            "type": ["number", "null"]
         },
         "selected_option": {
             "type": ["object", "null"],
