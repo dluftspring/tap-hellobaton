@@ -82,3 +82,31 @@ class ActivityStream(hellobatonStream):
     path = "/activity/"
     primary_keys = ["id"]
     schema_filepath = SCHEMAS_DIR / "activity.json"
+
+class CommentsStream(hellobatonStream):
+    """Define custom stream."""
+    name = "comments"
+    path = "/comments/"
+    primary_keys = ["id"]
+    schema_filepath = SCHEMAS_DIR / "comments.json"
+
+class CustomFieldsStream(hellobatonStream):
+    """Define custom stream."""
+    name = "custom_fields"
+    path = "/custom_fields/"
+    primary_keys = ["id"]
+    schema_filepath = SCHEMAS_DIR / "custom_fields.json"
+
+class CustomFieldOptionsStream(hellobatonStream):
+    """Define custom stream."""
+    name = "custom_field_options"
+    path = "/custom_field_options/"
+    primary_keys = ["id"]
+    schema_filepath = SCHEMAS_DIR / "custom_field_options.json"
+
+class CustomFieldValuesStream(hellobatonStream):
+    """Define custom stream."""
+    name = "custom_field_values"
+    path = "/custom_field_values/"
+    primary_keys = ["id"]
+    schema_filepath = SCHEMAS_DIR / "custom_field_values.json"

@@ -1,0 +1,58 @@
+{
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "_self": {
+            "type": "string"
+        },
+        "project": {
+            "type": "string"
+        },
+        "field": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "_self": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                }
+            }
+        },
+        "value_numeric": {
+            "type": ["integer", "null"]
+        },
+        "selected_option": {
+            "type": ["object", "nulll"],
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "_self": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "string"
+                },
+                "default": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "created": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "modified": {
+            "type": "string",
+            "format": "date-time"
+        }
+    }
+}

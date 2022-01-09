@@ -1,0 +1,33 @@
+{
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "_self": {
+            "type": "string"
+        },
+        "field": {
+            "type": "string"
+        },
+        "value": {
+            "type": "string"
+        },
+        "default": {
+            "type": "boolean"
+        },
+        "archived": {
+            "type": "boolean"
+        },
+        "created_by": {
+            "type": "string"
+        },
+        "created": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "modified": {
+            "type": "string",
+            "format": "date-time"
+        }
+    }
+}
