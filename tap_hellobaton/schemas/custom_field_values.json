@@ -30,7 +30,7 @@
             "type": ["integer", "null"]
         },
         "selected_option": {
-            "type": ["object", "nulll"],
+            "type": ["object", "null"],
             "properties": {
                 "id": {
                     "type": "integer"
