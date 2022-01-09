@@ -7,7 +7,7 @@
             "type": "string"
         },
         "author": {
-            "type": "string"
+            "type": ["string", "null"]
         },
         "task": {
             "type": "string"
