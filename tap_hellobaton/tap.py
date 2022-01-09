@@ -16,7 +16,11 @@ from tap_hellobaton.streams import (
     UsersStream,
     TaskAttachmentsStream,
     TemplatesStream,
-    ActivityStream
+    ActivityStream,
+    CommentsStream,
+    CustomFieldsStream,
+    CustomFieldValuesStream,
+    CustomFieldOptionsStream
 )
 
 STREAM_TYPES = [
@@ -30,7 +34,11 @@ STREAM_TYPES = [
     UsersStream,
     TaskAttachmentsStream,
     TemplatesStream,
-    ActivityStream
+    ActivityStream,
+    CommentsStream,
+    CustomFieldsStream,
+    CustomFieldValuesStream,
+    CustomFieldOptionsStream
 ]
 
 class Taphellobaton(Tap):

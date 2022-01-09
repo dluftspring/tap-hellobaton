@@ -1,0 +1,48 @@
+{
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "_self": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": ["string", "null"]
+        },
+        "visibility": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string"
+        },
+        "required": {
+            "type": "boolean"
+        },
+        "multiselect": {
+            "type": "boolean"
+        },
+        "number_scale": {
+            "type": "integer"
+        },
+        "number_display": {
+            "type": "string"
+        },
+        "options": {
+            "type": ["string", "null"]
+        },
+        "created_by": {
+            "type": "string"
+        },
+        "created": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "modified": {
+            "type": "string",
+            "format": "date-time"
+        }
+    }
+}
