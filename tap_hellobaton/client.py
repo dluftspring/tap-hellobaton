@@ -8,9 +8,6 @@ from urllib.parse import (
 from pathlib import Path
 from typing import Any, Dict, Optional, Union, List, Iterable
 
-from memoization import cached
-
-from singer_sdk.helpers.jsonpath import extract_jsonpath
 from singer_sdk.streams import RESTStream
 from singer_sdk.authenticators import APIKeyAuthenticator
 
@@ -35,9 +32,9 @@ class hellobatonStream(RESTStream):
         """Return a new authenticator object."""
         return APIKeyAuthenticator.create_for_stream(
             self,
-            key="api_key",
-            value=self.config.get("api_key"),
-            location="params"
+            key = "api_key",
+            value = self.config.get('api_key'),
+            location  = "params"
         )
 
     @property
@@ -84,7 +81,6 @@ class hellobatonStream(RESTStream):
         for result in response.json()["results"]:
             yield result
 
-    def post_process(self, row: dict, context: Optional[dict]) -> dict:
+    def post_process(self, row: dict, context: Optional[dict] = None ) -> Optional[Dict[Any,Any]]:
         """As needed, append or transform raw data to match expected structure."""
-        # TODO: TBD if we need this method.
         return row

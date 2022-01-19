@@ -1,0 +1,27 @@
+name: Run tests
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-tests:
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install dependency manager
+        run: pip install poetry
+      - name: Install project dependencies
+        run: poetry install
+      - name: Call pytest
+        env:
+          TAP_HELLOBATON_COMPANY: ${{ secrets.TAP_HELLOBATON_COMPANY }}
+          TAP_HELLOBATON_API_KEY: ${{ secrets.TAP_HELLOBATON_API_KEY }}
+          TAP_HELLOBATON_USER_AGENT: ${{ secrets.TAP_HELLOBATON_USER_AGENT }}
+        run: poetry run pytest
+          
