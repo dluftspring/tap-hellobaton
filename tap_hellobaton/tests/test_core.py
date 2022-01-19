@@ -10,16 +10,21 @@ from singer_sdk.testing import get_standard_tap_tests
 from tap_hellobaton.tap import Taphellobaton
 from singer_sdk.streams import RESTStream
 from tap_hellobaton.client import hellobatonStream
+from typing import Dict, Any
 
 CONFIG_PATH = Path(__file__).parent.parent.parent / Path('.secrets/config.json')
 
-def set_sample_config(config_path):
+def set_sample_config(config_path: Path) -> Dict[str, Any]:
+    
+    if os.path.exists(config_path):
+        with open(config_path) as config_params:
+            file_config_params: Dict[str, Any] = json.load(config_params)
 
-    with open(config_path) as config_params:
-        file_config_params = json.load(config_params)
+    if not file_config_params:
+        file_config_params = {}
 
     #Just grab the config that they specify either through file or environment variables
-    config_to_test = {
+    config_to_test: Dict[str, Any] = {
         "company": os.getenv('TAP_HELLOBATON_COMPANY') or file_config_params['company'],
         "api_key": os.getenv('TAP_HELLOBATON_API_KEY') or file_config_params['api_key'],
         "user_agent": os.getenv('TAP_HELLOBATON_USER_AGENT') or file_config_params['user_agent']
