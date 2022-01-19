@@ -19,6 +19,6 @@ jobs:
       - name: Install the project dependencies
         run: poetry install
       - name: Run the linter
-        run: poetry run python -m black tap_hellobaton
+        run: poetry run python -m black tap_hellobaton --check --diff --color
       - name: Run type checking
         run: poetry run python -m mypy -p tap_hellobaton
