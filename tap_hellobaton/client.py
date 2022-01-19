@@ -30,13 +30,10 @@ class hellobatonStream(RESTStream):
     @property
     def authenticator(self) -> APIKeyAuthenticator:
         """Return a new authenticator object."""
-
-        api_key: str = self.config.get('api_key')
-
         return APIKeyAuthenticator.create_for_stream(
             self,
             key = "api_key",
-            value = api_key,
+            value = self.config.get('api_key'),
             location  = "params"
         )
 
