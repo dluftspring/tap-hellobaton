@@ -7,11 +7,6 @@ on:
 
 jobs:
   run-tests:
-  env:
-    TAP_HELLOBATON_COMPANY: ${{ secrets.TAP_HELLOBATON_COMPANY }}
-    TAP_HELLOBATON_API_KEY: ${{ secrets.TAP_HELLOBATON_API_KEY }}
-    TAP_HELLOBATON_USER_AGENT: ${{ secrets.TAP_HELLOBATON_USER_AGENT }}
-    
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -21,3 +16,8 @@ jobs:
       - run: pip install poetry
       - run: poetry install
       - run: poetry run pytest
+        with:
+          TAP_HELLOBATON_COMPANY: ${{ secrets.TAP_HELLOBATON_COMPANY }}
+          TAP_HELLOBATON_API_KEY: ${{ secrets.TAP_HELLOBATON_API_KEY }}
+          TAP_HELLOBATON_USER_AGENT: ${{ secrets.TAP_HELLOBATON_USER_AGENT }}
+          
