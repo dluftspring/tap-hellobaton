@@ -20,6 +20,7 @@ jsonschema = "^3.2.0"
 pytest = "^6.2.5"
 mypy = "^0.931"
 types-requests = "^2.27.7"
+black = "^21.12b0"
 
 [tool.poetry.scripts]
 tap-hellobaton = "tap_hellobaton.tap:Taphellobaton.cli"
