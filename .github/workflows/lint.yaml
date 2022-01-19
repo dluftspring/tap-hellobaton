@@ -17,8 +17,3 @@ jobs:
       - run: pip install black mypy
       - run: python -m black tap_hellobaton
       - run: python -m mypy -p tap_hellobaton
-      
-
-
-
-    
