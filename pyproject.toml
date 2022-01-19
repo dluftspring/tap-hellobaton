@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "tap-hellobaton"
+description = "Singer.io tap for extracting data from the Essesnys api"
+version = "0.0.3"
+license = "Apache 2.0"
+authors = ["Daniel Luftspring"]
+readme = "README.md"
+repository = "https://github.com/dluftspring/tap-hellobaton"
+
+packages = [
+    { include = "tap_hellobaton"}
+]
+
+[tool.poetry.dependencies]
+python = ">3.8, <3.11"
+singer-sdk = "^0.3.17"
+requests = "^2.26.0"
+urllib3 = "^1.26.8"
+jsonschema = "^3.2.0"
+pytest = "^6.2.5"
+mypy = "^0.931"
+types-requests = "^2.27.7"
+
+[tool.poetry.scripts]
+tap-hellobaton = "tap_hellobaton.tap:Taphellobaton.cli"
+
+[build-system]
+requires = ["poetry"]
+build-backend = "poetry.masonry.api"
