@@ -23,7 +23,5 @@ jobs:
           TAP_HELLOBATON_COMPANY: ${{ secrets.TAP_HELLOBATON_COMPANY }}
           TAP_HELLOBATON_API_KEY: ${{ secrets.TAP_HELLOBATON_API_KEY }}
           TAP_HELLOBATON_USER_AGENT: ${{ secrets.TAP_HELLOBATON_USER_AGENT }}
-        run: |
-          echo $TAP_HELLOBATON_COMPANY
-          poetry run pytest
+        run: poetry run pytest
           
