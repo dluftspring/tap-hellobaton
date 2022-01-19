@@ -24,9 +24,9 @@ def set_sample_config(config_path: Path) -> Dict[str, Any]:
 
     #Just grab the config that they specify either through file or environment variables
     config_to_test: Dict[str, Any] = {
-        "company": os.getenv('TAP_HELLOBATON_COMPANY') or file_config_params['company'],
-        "api_key": os.getenv('TAP_HELLOBATON_API_KEY') or file_config_params['api_key'],
-        "user_agent": os.getenv('TAP_HELLOBATON_USER_AGENT') or file_config_params['user_agent']
+        "company": os.getenv('TAP_HELLOBATON_COMPANY') or file_config_params.get('company', None),
+        "api_key": os.getenv('TAP_HELLOBATON_API_KEY') or file_config_params.get('api_key', None),
+        "user_agent": os.getenv('TAP_HELLOBATON_USER_AGENT') or file_config_params.get('user_agent', None)
     }
 
     return config_to_test
