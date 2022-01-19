@@ -20,7 +20,7 @@ def set_sample_config(config_path: Path) -> Dict[str, Any]:
     
     if os.path.exists(config_path):
         with open(config_path) as config_params:
-            file_config_params: Dict[str, Any] = json.load(config_params)
+            file_config_params = json.load(config_params)
 
     #Just grab the config that they specify either through file or environment variables
     config_to_test: Dict[str, Any] = {
