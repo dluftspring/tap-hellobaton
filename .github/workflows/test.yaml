@@ -14,11 +14,15 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.9
-      - run: pip install poetry
-      - run: poetry install
-      - run: poetry run pytest
+      - name: Install dependency manager
+        run: pip install poetry
+      - name: Install project dependencies
+        run: poetry install
+      - name: Call pytest
         with:
           TAP_HELLOBATON_COMPANY: ${{ secrets.TAP_HELLOBATON_COMPANY }}
           TAP_HELLOBATON_API_KEY: ${{ secrets.TAP_HELLOBATON_API_KEY }}
           TAP_HELLOBATON_USER_AGENT: ${{ secrets.TAP_HELLOBATON_USER_AGENT }}
+        run: poetry run pytest
+        
           
