@@ -53,7 +53,7 @@ def get_samples_from_streams() -> Dict[str, Any]:
         #Only optional arguments should be unset
         if val:
             os.environ[env_var] = val
-    cli_out = subprocess.run(['tap-essensys','--config', 'ENV', '--test'], stdout=subprocess.PIPE).stdout.decode('utf-8')
+    cli_out = subprocess.run(['tap-hellobaton','--config', 'ENV', '--test'], stdout=subprocess.PIPE).stdout.decode('utf-8')
 
     #Parse the output to get each record not the schema
     cli_out_lines = cli_out.split('\n')
