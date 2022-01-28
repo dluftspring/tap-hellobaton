@@ -12,6 +12,21 @@ Install directly from the repo source using pip
 pip install git+https://github.com/dluftspring/tap-hellobaton.git
 ```
 
+### For developers
+
+Install the dev dependencies using [poetry](https://python-poetry.org/)
+
+```bash
+~$ poetry install
+```
+
+Then make sure the tests are passing locally
+
+```bash
+~$ poetry run pytest
+```
+
+
 ## Configuration
 
 ### Accepted Config Options

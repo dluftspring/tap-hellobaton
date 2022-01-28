@@ -1,15 +1,13 @@
 """Tests standard tap features using the built-in SDK tests library."""
 
-import datetime
 import os
 import json
-import pytest
+import subprocess
 from pathlib import Path
 from argparse import ArgumentParser
+from jsonschema import validate
 from singer_sdk.testing import get_standard_tap_tests
 from tap_hellobaton.tap import Taphellobaton
-from singer_sdk.streams import RESTStream
-from tap_hellobaton.client import hellobatonStream
 from typing import Dict, Any
 
 CONFIG_PATH = Path(__file__).parent.parent.parent / Path('.secrets/config.json')
@@ -31,6 +29,48 @@ def set_sample_config(config_path: Path) -> Dict[str, Any]:
 
     return config_to_test
 
+def get_samples_from_streams() -> Dict[str, Any]:
+    """
+    Helper method that gets a single record from each supported stream
+    and it's corresponding schema
+
+    Returns:
+        A dictionary with the stream name as the key and sub-dictionary keyed with both the record instance and associated schema
+        e.g.
+        { 'account': {
+                'record': {'id': '123', 'name': 'test'},
+                'schema: {'id': 'integer', 'name': 'string'} 
+            }
+          'account_transaction':
+          .
+          .
+          .
+        }
+    """
+    SAMPLE_CONFIG=set_sample_config(CONFIG_PATH)
+    #The way to get a single record is to run the connection test and parse the command line
+    for env_var,val in SAMPLE_CONFIG.items():
+        #Only optional arguments should be unset
+        if val:
+            os.environ[env_var] = val
+    cli_out = subprocess.run(['tap-essensys','--config', 'ENV', '--test'], stdout=subprocess.PIPE).stdout.decode('utf-8')
+
+    #Parse the output to get each record not the schema
+    cli_out_lines = cli_out.split('\n')
+    records = []
+    schemas = []
+    for line in cli_out_lines:
+        if 'RECORD' in line:
+            records.append(line)
+        if 'SCHEMA' in line:
+            schemas.append(line)
+
+    json_records = [json.loads(record) for record in records]
+    json_schemas = [json.loads(schema) for schema in schemas]
+
+    return { record_item['stream'] : {'record': record_item['record'], 'schema': schema_item['schema'] } for record_item, schema_item in zip(json_records,json_schemas) }
+
+
 # Run standard built-in tap tests from the SDK:
 def test_standard_tap_tests():
     """Run standard tap tests from the SDK."""
@@ -43,11 +83,13 @@ def test_standard_tap_tests():
     for test in tests:
         test()
 
+def test_validate_schema():
+    """Test that json schema is valid against a single record."""
+    data_to_validate = get_samples_from_streams()
 
-def test_check_connection():
+    validation_results = []
+    for stream in data_to_validate.keys():
+        stream_validation = validate(instance=data_to_validate[stream]['record'], schema=data_to_validate[stream]['schema'])
+        validation_results.append(stream_validation)
 
-    SAMPLE_CONFIG = set_sample_config(CONFIG_PATH)
-    tap = Taphellobaton(config=SAMPLE_CONFIG)
-    result = tap.run_connection_test()
-
-    assert result
+    assert all(validation_results)
