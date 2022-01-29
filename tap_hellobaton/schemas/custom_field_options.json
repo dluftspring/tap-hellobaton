@@ -19,7 +19,7 @@
             "type": "boolean"
         },
         "created_by": {
-            "type": "string"
+            "type": ["string", "null"]
         },
         "created": {
             "type": "string",
