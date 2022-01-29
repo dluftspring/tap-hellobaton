@@ -98,6 +98,6 @@ def test_validate_schema():
         else:
             validation_results.append(False)
             for error in errors:
-                errors_humanized += (f"Error in stream {error.instance}: {error.message}\n")
+                errors_humanized += (f"Error in stream {error.schema}: with field {error.schema_path[1]}: {error.message}\n")
 
     assert all(validation_results), errors_humanized
