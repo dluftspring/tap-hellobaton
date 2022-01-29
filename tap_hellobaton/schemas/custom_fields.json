@@ -25,7 +25,7 @@
             "type": "boolean"
         },
         "number_scale": {
-            "type": "integer"
+            "type": ["integer", "null"]
         },
         "number_display": {
             "type": "string"
