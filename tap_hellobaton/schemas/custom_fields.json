@@ -28,7 +28,7 @@
             "type": ["integer", "null"]
         },
         "number_display": {
-            "type": "string"
+            "type": ["string", "null"]
         },
         "options": {
             "type": ["string", "null"]
