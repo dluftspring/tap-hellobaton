@@ -6,6 +6,7 @@ import subprocess
 from pathlib import Path
 from argparse import ArgumentParser
 from jsonschema import validate
+from jsonschema.validators import Draft7Validator
 from singer_sdk.testing import get_standard_tap_tests
 from tap_hellobaton.tap import Taphellobaton
 from typing import Dict, Any
@@ -88,8 +89,15 @@ def test_validate_schema():
     data_to_validate = get_samples_from_streams()
 
     validation_results = []
+    errors_humanized = ""
     for stream in data_to_validate.keys():
-        stream_validation = validate(instance=data_to_validate[stream]['record'], schema=data_to_validate[stream]['schema'])
-        validation_results.append(stream_validation)
+        validator = Draft7Validator(data_to_validate[stream]['schema'])
+        errors = sorted(validator.iter_errors(data_to_validate[stream]['record']), key=lambda e: e.path)
+        if not errors:
+            validation_results.append(True)
+        else:
+            validation_results.append(False)
+            for error in errors:
+                errors_humanized += (f"Error in stream {error.instance}: {error.message}\n")
 
-    assert all(validation_results)
+    assert all(validation_results), errors_humanized
