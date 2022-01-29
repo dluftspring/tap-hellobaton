@@ -25,16 +25,16 @@
             "type": "boolean"
         },
         "number_scale": {
-            "type": "integer"
+            "type": ["integer", "null"]
         },
         "number_display": {
-            "type": "string"
+            "type": ["string", "null"]
         },
         "options": {
             "type": ["string", "null"]
         },
         "created_by": {
-            "type": "string"
+            "type": ["string", "null"]
         },
         "created": {
             "type": "string",
