@@ -10,7 +10,7 @@
             "type": "string"
         },
         "description": {
-            "type": ["string", "null"]
+            "type": ["null", "string"]
         },
         "project": {
             "type": "string"
@@ -19,7 +19,7 @@
             "type": "string"
         },
         "phase": {
-            "type": ["object", "null"],
+            "type": ["null", "object"],
             "properties": {
                 "id": {
                     "type": "integer"
@@ -44,7 +44,7 @@
             "type": "boolean"
         },
         "deadline_datetime": {
-            "type": ["string", "null"],
+            "type": ["null", "string"],
             "format": "date-time"
         },
         "risk_profiles": {
@@ -71,11 +71,11 @@
             "type": "string"
         },
         "finish_datetime": {
-            "type": ["string", "null"],
+            "type": ["null", "string"],
             "format": "date-time"
         },
         "created_from": {
-            "type": ["string", "null"]
+            "type": ["null", "string"]
         },
         "duration": {
             "type": "integer"

@@ -16,7 +16,7 @@
             "type": "string"
         },
         "task": {
-            "type": ["string", "null"]
+            "type": ["null", "string"]
         },
         "rate": {
             "type": "object",
@@ -30,11 +30,11 @@
             }
         },
         "started_at": {
-            "type": ["string", "null"],
+            "type": ["null", "string"],
             "format": "date-time"
         },
         "ended_at": {
-            "type": ["string", "null"],
+            "type": ["null", "string"],
             "format": "date-time"
         },
         "reference_date": {
@@ -45,10 +45,10 @@
             "type": "boolean"
         },
         "calculated_duration": {
-            "type": ["integer", "null"]
+            "type": ["null", "integer"]
         },
         "inputted_duration": {
-            "type": ["integer", "null"]
+            "type": ["null", "integer"]
         },
         "notes": {
             "type": "string"

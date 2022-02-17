@@ -11,7 +11,7 @@
             "type": "string"
         },
         "client_systems": {
-            "type": ["string", "null"]
+            "type": ["null", "string"]
         },
         "companies": {
             "type": "array",
@@ -20,31 +20,31 @@
             }
         },
         "completed_datetime": {
-            "type": ["string", "null"],
+            "type": ["null", "string"],
             "format": "date-time"
         },
         "cost": {
-            "type": ["integer", "null"]
+            "type": ["null", "integer"]
         },
         "created": {
             "type": "string",
             "format": "date-time"
         },
         "created_from": {
-            "type": ["string", "null"]
+            "type": ["null", "string"]
         },
         "created_from_template": {
-            "type": ["string", "null"]
+            "type": ["null", "string"]
         },
         "creator": {
-            "type": ["string", "null"]
+            "type": ["null", "string"]
         },
         "deadline_datetime": {
-            "type": ["string", "null"],
+            "type": ["null", "string"],
             "format": "date-time"
         },
         "estimated_duration": {
-            "type": ["integer", "null"]
+            "type": ["null", "integer"]
         },
         "id": {
             "type": "integer"
@@ -56,11 +56,11 @@
             "type": "string"
         },
         "modified": {
-            "type": ["string", "null"],
+            "type": ["null", "string"],
             "format": "date-time"
         },
         "phase": {
-            "type": ["object", "null"],
+            "type": ["null", "object"],
             "properties": {
                 "id": {
                     "type": "integer"
@@ -69,7 +69,7 @@
                     "type": "string"
                 },
                 "name": {
-                    "type": ["string", "null"]
+                    "type": ["null", "string"]
                 },
                 "order": {
                     "type": "integer"
@@ -105,18 +105,18 @@
                         "type": "string"
                     },
                     "projected_golive_datetime": {
-                        "type": ["string", "null"],
+                        "type": ["null", "string"],
                         "format": "date-time"
                     }
                 }
             }
         },
         "start_datetime": {
-            "type": ["string", "null"],
+            "type": ["null", "string"],
             "format": "date-time"
         },
         "started_datetime": {
-            "type": ["string", "null"],
+            "type": ["null", "string"],
             "format": "date-time"
         },
         "status": {

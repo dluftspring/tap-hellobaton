@@ -27,10 +27,10 @@
             }
         },
         "value_numeric": {
-            "type": ["number", "null"]
+            "type": ["null", "number"]
         },
         "selected_option": {
-            "type": ["object", "null"],
+            "type": ["null", "object"],
             "properties": {
                 "id": {
                     "type": "integer"

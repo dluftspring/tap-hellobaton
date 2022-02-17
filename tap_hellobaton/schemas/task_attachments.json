@@ -16,7 +16,7 @@
             "type": "string"
         },
         "label": {
-            "type": ["string", "null"]
+            "type": ["null", "string"]
         },
         "deliverable": {
             "type": "boolean"
@@ -25,16 +25,16 @@
             "type": "boolean"
         },
         "approved": {
-            "type": ["boolean", "null"]
+            "type": ["null", "boolean"]
         },
         "revision_task": {
-            "type": ["string", "null"]
+            "type": ["null", "string"]
         },
         "original_filename": {
-            "type": ["string", "null"]
+            "type": ["null", "string"]
         },
         "created_by": {
-            "type": ["string", "null"]
+            "type": ["null", "string"]
         },
         "created": {
             "type": "string"

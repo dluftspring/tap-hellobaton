@@ -8,8 +8,8 @@
     },
     "type": {
       "type": [
-        "string",
-        "null"
+        "null",
+        "string"
         ]
     },
     "group": {
@@ -17,20 +17,20 @@
     },
     "parent": {
       "type": [
-        "string",
-        "null"
+        "null",
+        "string"
       ]
     },
     "child": {
       "type": [
-        "string",
-        "null"
+        "null",
+        "string"
       ]
     },
     "actor": {
       "type": [
-        "string",
-        "null"
+        "null",
+        "string"
       ]
     },
     "project": {
@@ -38,20 +38,20 @@
     },
     "parent_type": {
       "type": [
-        "string",
-        "null"
+        "null",
+        "string"
       ]
     },
     "child_type": {
       "type": [
-        "string",
-        "null"
+        "null",
+        "string"
       ]
     },
     "meta": {
       "type": [
-        "object",
-        "null"
+        "null",
+        "object"
         ]
     },
     "created": {

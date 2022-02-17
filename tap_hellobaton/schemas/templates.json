@@ -14,55 +14,55 @@
         },
         "cost": {
             "type": [
-                "string",
-                "null"
+                "null",
+                "string"
             ]
         },
         "annual_contract_value": {
             "type": [
-                "string",
-                "null"
+                "null",
+                "string"
             ]
         },
         "implementation_budget": {
             "type": [
-                "string",
-                "null"
+                "null",
+                "string"
             ]
         },
         "estimated_duration": {
             "type": [
-                "integer",
-                "null"
+                "null",
+                "integer"
             ]
         },
         "created_from_template": {
-            "type": ["string", "null"]
+            "type": ["null", "string"]
         },
         "created_from": {
-            "type": ["string", "null"]
+            "type": ["null", "string"]
         },
         "start_datetime": {
-            "type": ["string", "null"],
+            "type": ["null", "string"],
             "format": "date-time"
         },
         "started_datetime": {
-            "type": ["string", "null"],
+            "type": ["null", "string"],
             "format": "date-time"
         },
         "deadline_datetime": {
-            "type": ["string", "null"],
+            "type": ["null", "string"],
             "format": "date-time"
         },
         "completed_datetime": {
-            "type": ["string", "null"],
+            "type": ["null", "string"],
             "format": "date-time"
         },
         "client_systems": {
-            "type": ["string", "null"]
+            "type": ["null", "string"]
         },
         "phase": {
-            "type": ["object", "null"],
+            "type": ["null", "object"],
             "properties": {
                 "id": {
                     "type": "integer"
@@ -84,7 +84,7 @@
             }
         },
         "creator": {
-            "type": ["string", "null"]
+            "type": ["null", "string"]
         },
         "task_list": {
             "type": "string"
