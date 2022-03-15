@@ -29,7 +29,7 @@ STREAM_TYPES = [
     CompaniesStream,
     MilestonesStream,
     PhasesStream,
-    # ProjectUsersStream,
+    ProjectUsersStream,
     ProjectAttachementsStream,
     TasksStream,
     TimeEntriesStream,
