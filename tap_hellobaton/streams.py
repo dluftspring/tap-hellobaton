@@ -1,7 +1,6 @@
 """Stream type classes for tap-hellobaton."""
 
 from pathlib import Path
-from typing import Any, Dict, Optional, Union, List, Iterable
 from tap_hellobaton.client import hellobatonStream
 
 SCHEMAS_DIR = Path(__file__).parent / Path("./schemas")
@@ -40,6 +39,13 @@ class ProjectAttachementsStream(hellobatonStream):
     path = "/project_attachments/"
     primary_keys = ["id"]
     schema_filepath = SCHEMAS_DIR / "project_attachments.json"
+
+class ProjectUsersStream(hellobatonStream):
+    """Define custom stream."""
+    name = "project_users"
+    path = "/project_users/"
+    primary_keys = ["id"]
+    schema_filepath = SCHEMAS_DIR / "project_users.json"
 
 class TasksStream(hellobatonStream):
     """Define custom stream."""
