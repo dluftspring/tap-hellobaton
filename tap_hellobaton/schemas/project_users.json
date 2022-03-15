@@ -9,22 +9,22 @@
         "project": {
             "type": "string"
         },
-        "url": {
+        "user": {
             "type": "string"
         },
-        "label": {
-            "type": ["string", "null"]
-        },
-        "created_by": {
+        "role": {
             "type": "string"
         },
-        "type": {
-            "type": "string"
-        },
-        "is_sow": {
+        "joined": {
             "type": "boolean"
         },
-        "original_filename": {
+        "joined_on": {
+            "type": ["string", "null"]
+        },
+        "invited": {
+            "type": "boolean"
+        },
+        "invited_on": {
             "type": ["string", "null"]
         },
         "created": {

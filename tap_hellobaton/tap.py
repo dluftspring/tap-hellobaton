@@ -7,6 +7,7 @@ from singer_sdk import typing as th  # JSON schema typing helpers
 
 from tap_hellobaton.streams import (
     ProjectAttachementsStream,
+    ProjectUsersStream,
     ProjectsStream,
     CompaniesStream,
     MilestonesStream,
@@ -28,6 +29,7 @@ STREAM_TYPES = [
     CompaniesStream,
     MilestonesStream,
     PhasesStream,
+    # ProjectUsersStream,
     ProjectAttachementsStream,
     TasksStream,
     TimeEntriesStream,
