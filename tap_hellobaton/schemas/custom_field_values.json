@@ -29,6 +29,9 @@
         "value_numeric": {
             "type": ["number", "null"]
         },
+        "value_text": {
+            "type": ["string", "null"]
+        },
         "selected_option": {
             "type": ["object", "null"],
             "properties": {
