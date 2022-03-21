@@ -24,7 +24,7 @@
             "format": "date-time"
         },
         "cost": {
-            "type": ["integer", "null"]
+            "type": ["number", "null"]
         },
         "created": {
             "type": "string",
