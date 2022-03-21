@@ -19,7 +19,7 @@
             "type": ["string", "null"]
         },
         "rate": {
-            "type": "object",
+            "type": ["object", "null"],
             "properties": {
                 "id": {
                     "type": "integer"
