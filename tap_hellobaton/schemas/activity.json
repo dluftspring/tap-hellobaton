@@ -1,66 +1,69 @@
 {
-  "properties": {
-    "id": {
-      "type": "integer"
-    },
-    "_self": {
-      "type": "string"
-    },
-    "type": {
-      "type": [
-        "string",
-        "null"
-        ]
-    },
-    "group": {
-      "type": "string"
-    },
-    "parent": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "child": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "actor": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "project": {
-      "type": "string"
-    },
-    "parent_type": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "child_type": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "meta": {
-      "type": [
-        "object",
-        "null"
-        ]
-    },
-    "created": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "modified": {
-      "type": "string",
-      "format": "date-time"
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "_self": {
+            "type": "string"
+        },
+        "type": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "group": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "parent": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "child": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "actor": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "project": {
+            "type": "string"
+        },
+        "parent_type": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "child_type": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "meta": {
+            "type": [
+                "object",
+                "null"
+            ]
+        },
+        "created": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "modified": {
+            "type": "string",
+            "format": "date-time"
+        }
     }
-  }
 }
