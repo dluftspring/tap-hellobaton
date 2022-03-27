@@ -52,10 +52,7 @@
       ]
     },
     "meta": {
-      "type": [
-        "object",
-        "null"
-      ],
+      "type": "object",
       "properties": {
         "new_status": {
           "type": ["integer", "null"]
@@ -68,6 +65,12 @@
         },
         "previous_assignee": {
           "type": ["integer", "null"]
+        },
+        "new_due_date": {
+          "type": ["date-time", "null"]
+        },
+        "previous_due_date": {
+          "type": ["date-time", "null"]
         }
       }
     },
