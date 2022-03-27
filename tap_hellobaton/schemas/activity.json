@@ -13,7 +13,10 @@
         ]
     },
     "group": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "parent": {
       "type": [
@@ -55,10 +58,22 @@
       ],
       "properties": {
         "new_status": {
-            "type": ["integer", "null"]
+          "type": ["integer", "null"]
         },
         "previous_status": {
-            "type": ["integer", "null"]
+          "type": ["integer", "null"]
+        },
+        "new_assignee": {
+          "type": ["integer", "null"]
+        },
+        "previous_assignee": {
+          "type": ["integer", "null"]
+        },
+        "new_due_date": {
+          "type": ["date-time", "null"]
+        },
+        "previous_due_date": {
+          "type": ["date-time", "null"]
         }
       }
     },
