@@ -52,7 +52,15 @@
       "type": [
         "object",
         "null"
-        ]
+      ],
+      "properties": {
+        "new_status": {
+            "type": ["integer", "null"]
+        },
+        "previous_status": {
+            "type": ["integer", "null"]
+        }
+      }
     },
     "created": {
       "type": "string",
