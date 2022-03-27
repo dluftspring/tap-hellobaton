@@ -53,6 +53,7 @@
     },
     "meta": {
       "type": "object",
+      "anyOf": [ { "type": "object" } ],
       "properties": {
         "new_status": {
           "type": ["integer", "null"]
