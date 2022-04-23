@@ -53,9 +53,6 @@
     },
     "meta": {
       "type": ["object", "null"],
-      "additionalProperties": {
-          "type": ["string", "number", "date-time", "null"]
-      },
       "properties": {
         "new_status": {
           "type": ["integer", "null"]
