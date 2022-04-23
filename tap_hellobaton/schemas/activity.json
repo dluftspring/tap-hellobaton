@@ -70,10 +70,12 @@
           "type": ["integer", "null"]
         },
         "new_due_date": {
-          "type": ["date-time", "null"]
+          "type": ["string", "null"],
+          "format": "date-time"
         },
         "previous_due_date": {
-          "type": ["date-time", "null"]
+          "type": ["string", "null"],
+          "format": "date-time"
         }
       }
     },
