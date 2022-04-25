@@ -145,9 +145,11 @@ Now you can test and orchestrate using Meltano:
 meltano invoke tap-hellobaton --version
 # OR run a test `elt` pipeline:
 meltano elt tap-hellobaton target-jsonl
+# Google bigquery example
+meltano elt tap-hellobaton target-bigquery
 ```
 
-Note that to use the target-jsonl with a new meltano project you'll have to add the configuration to your `meltano.yml` project file and install the plugin
+Note that to use the target-jsonl with a new meltano project you'll have to add the configuration to your `meltano.yml` project file and install the plugin. NOTE: make sure your destination path exists in the project directory or the command will throw an error
 
 ```yaml
 - name: target-jsonl
@@ -157,4 +159,28 @@ Note that to use the target-jsonl with a new meltano project you'll have to add 
       destination_path: load/jsonl_target_tests
 ```
 
-NOTE: make sure your destination path exists in the project directory or the command will throw an error
+To use the target-bigquery with a new meltano project you'll have to add the configuration to your `meltano.yml` project file and install the plugin. Follow the instructions to configure the [bigquery target](https://github.com/adswerve/target-bigquery#step-1-enable-google-bigquery-api).
+
+```yaml
+# For bigquery
+loaders:
+- name: target-bigquery
+  variant: adswerve
+  pip_url: git+https://github.com/adswerve/target-bigquery.git@0.12.2
+  config:
+    project_id: {your gcp project}
+    dataset_id: {your gcp dataset id}
+    validate_records: true
+  settings:
+  - name: project_id
+    kind: string
+  - name: dataset_id
+    kind: password
+  - name: location
+    kind: string
+  - name: credentials_path
+    kind: string
+  - name: add_metadata_columns
+    kind: boolean
+```
+
