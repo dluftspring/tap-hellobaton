@@ -1,58 +1,96 @@
 {
-  "properties": {
-    "id": {
+  "properties":
+  {
+    "id":
+    {
       "type": "integer"
     },
-    "_self": {
+    "_self":
+    {
       "type": "string"
     },
-    "type": {
-      "type": [
-        "string",
-        "null"
-        ]
-    },
-    "group": {
-      "type": [
+    "type":
+    {
+      "type":
+      [
         "string",
         "null"
       ]
     },
-    "parent": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "child": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "actor": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "project": {
+    "group":
+    {
       "type": "string"
     },
-    "parent_type": {
-      "type": [
+    "parent":
+    {
+      "type":
+      [
         "string",
         "null"
       ]
     },
-    "child_type": {
-      "type": [
+    "child":
+    {
+      "type":
+      [
         "string",
         "null"
       ]
     },
-    "meta": {
-      "type": ["object", "null"],
+    "actor":
+    {
+      "type":
+      [
+        "string",
+        "null"
+      ]
+    },
+    "project":
+    {
+      "type": "string"
+    },
+    "parent_type":
+    {
+      "type":
+      [
+        "string",
+        "null"
+      ]
+    },
+    "child_type":
+    {
+      "type":
+      [
+        "string",
+        "null"
+      ]
+    },
+    "meta":
+    {
+      "type":
+      [
+        "object",
+        "null"
+      ],
+<<<<<<< HEAD
+      "properties":
+      {
+        "new_status":
+        {
+          "type":
+          [
+            "integer",
+            "null"
+          ]
+        },
+        "previous_status":
+        {
+          "type":
+          [
+            "integer",
+            "null"
+          ]
+=======
       "properties": {
         "new_status": {
           "type": ["integer", "null"]
@@ -67,20 +105,21 @@
           "type": ["integer", "null"]
         },
         "new_due_date": {
-          "type": ["string", "null"],
-          "format": "date-time"
+          "type": ["date-time", "null"]
         },
         "previous_due_date": {
-          "type": ["string", "null"],
-          "format": "date-time"
+          "type": ["date-time", "null"]
+>>>>>>> 6584558 (chg: Group can be null)
         }
       }
     },
-    "created": {
+    "created":
+    {
       "type": "string",
       "format": "date-time"
     },
-    "modified": {
+    "modified":
+    {
       "type": "string",
       "format": "date-time"
     }
