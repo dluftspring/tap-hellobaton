@@ -72,7 +72,6 @@
         "object",
         "null"
       ],
-<<<<<<< HEAD
       "properties":
       {
         "new_status":
@@ -90,26 +89,38 @@
             "integer",
             "null"
           ]
-=======
-      "properties": {
-        "new_status": {
-          "type": ["integer", "null"]
         },
-        "previous_status": {
-          "type": ["integer", "null"]
+        "new_assignee":
+        {
+          "type":
+          [
+            "integer",
+            "null"
+          ]
         },
-        "new_assignee": {
-          "type": ["integer", "null"]
+        "previous_assignee":
+        {
+          "type":
+          [
+            "integer",
+            "null"
+          ]
         },
-        "previous_assignee": {
-          "type": ["integer", "null"]
+        "new_due_date":
+        {
+          "type":
+          [
+            "date-time",
+            "null"
+          ]
         },
-        "new_due_date": {
-          "type": ["date-time", "null"]
-        },
-        "previous_due_date": {
-          "type": ["date-time", "null"]
->>>>>>> 6584558 (chg: Group can be null)
+        "previous_due_date":
+        {
+          "type":
+          [
+            "date-time",
+            "null"
+          ]
         }
       }
     },
