@@ -68,7 +68,7 @@
             }
         },
         "start_datetime": {
-            "type": "string"
+            "type": ["string", "null"]
         },
         "finish_datetime": {
             "type": ["string", "null"],
