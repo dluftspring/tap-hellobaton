@@ -1,0 +1,25 @@
+{
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "_self": {
+            "type": "string"
+        },
+        "rating": {
+            "type": "integer"
+        },
+        "comment": {
+            "type": ["string", "null"]
+        },
+        "milestone": {
+            "type": "string"
+        },
+        "project": {
+            "type": "string"
+        },
+        "created_by": {
+            "type": "string",
+        }
+    }
+}
