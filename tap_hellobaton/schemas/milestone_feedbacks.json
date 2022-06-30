@@ -19,7 +19,7 @@
             "type": "string"
         },
         "created_by": {
-            "type": "string",
+            "type": "string"
         }
     }
 }
