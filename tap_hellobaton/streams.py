@@ -29,7 +29,7 @@ class MilestonesStream(hellobatonStream):
 class MilestoneFeedbacksStream(hellobatonStream):
     """Define custom stream."""
     name = "milestone_feedbacks"
-    path = "/milestone_feedbacks/"
+    path = "/milestone_feedback/"
     primary_keys = ["id"]
     schema_filepath = SCHEMAS_DIR / "milestone_feedbacks.json"
 
