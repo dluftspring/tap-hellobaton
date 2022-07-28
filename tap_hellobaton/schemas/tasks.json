@@ -18,8 +18,11 @@
     "status": {
       "type": "string"
     },
-    "dependency": {
-      "type": ["string", "null"]
+    "dependencies": {
+      "type": "array",
+      "items": {
+          "type": "number"
+      }
     },
     "start_datetime": {
       "type": ["string", "null"],
