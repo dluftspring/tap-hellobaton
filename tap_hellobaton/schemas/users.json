@@ -4,7 +4,8 @@
             "type": "integer"
         },
         "_self": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
         },
         "first_name": {
             "type": "string"
@@ -13,7 +14,8 @@
             "type": "string"
         },
         "email": {
-            "type": "string"
+            "type": "string",
+            "format": "email"
         },
         "account_type": {
             "type": "string"
@@ -22,16 +24,28 @@
             "type": "string"
         },
         "company": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
         },
         "avatar_url": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
         },
         "created_by": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
         },
         "signed_up_at": {
-            "type": ["string", "null"],
+            "type": [
+                "string",
+                "null"
+            ],
             "format": "date-time"
         },
         "created": {
@@ -42,5 +56,7 @@
             "type": "string",
             "format": "date-time"
         }
-    }
+    },
+    "required": [],
+    "type": "object"
 }

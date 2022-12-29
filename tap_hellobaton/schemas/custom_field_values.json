@@ -4,10 +4,12 @@
             "type": "integer"
         },
         "_self": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
         },
         "project": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
         },
         "field": {
             "type": "object",
@@ -16,7 +18,8 @@
                     "type": "integer"
                 },
                 "_self": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "uri"
                 },
                 "title": {
                     "type": "string"
@@ -27,19 +30,29 @@
             }
         },
         "value_numeric": {
-            "type": ["number", "null"]
+            "type": [
+                "number",
+                "null"
+            ]
         },
         "value_text": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ]
         },
         "selected_option": {
-            "type": ["object", "null"],
+            "type": [
+                "object",
+                "null"
+            ],
             "properties": {
                 "id": {
                     "type": "integer"
                 },
                 "_self": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "uri"
                 },
                 "value": {
                     "type": "string"
@@ -56,6 +69,18 @@
         "modified": {
             "type": "string",
             "format": "date-time"
+        },
+        "value_date": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "date"
         }
-    }
+    },
+    "required": [
+        "field",
+        "selected_option"
+    ],
+    "type": "object"
 }

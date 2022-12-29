@@ -4,13 +4,17 @@
             "type": "integer"
         },
         "_self": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
         },
         "title": {
             "type": "string"
         },
         "description": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ]
         },
         "visibility": {
             "type": "string"
@@ -25,16 +29,30 @@
             "type": "boolean"
         },
         "number_scale": {
-            "type": ["integer", "null"]
+            "type": [
+                "integer",
+                "null"
+            ]
         },
         "number_display": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ]
         },
         "options": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
         },
         "created_by": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
         },
         "created": {
             "type": "string",
@@ -44,5 +62,9 @@
             "type": "string",
             "format": "date-time"
         }
-    }
+    },
+    "required": [
+        "title"
+    ],
+    "type": "object"
 }

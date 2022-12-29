@@ -1,113 +1,162 @@
 {
-  "properties": {
-    "id": {
-      "type": "integer"
-    },
-    "_self": {
-      "type": "string"
-    },
-    "title": {
-      "type": "string"
-    },
-    "description": {
-      "type": ["string", "null"]
-    },
-    "project": {
-      "type": "string"
-    },
-    "status": {
-      "type": "string"
-    },
-    "dependency": {
-      "type": ["string", "null"]
-    },
-    "start_datetime": {
-      "type": ["string", "null"],
-      "format": "date-time"
-    },
-    "due_datetime": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "started_datetime": {
-      "type": ["string", "null"],
-      "format": "date-time"
-    },
-    "finished_datetime": {
-      "type": ["string", "null"],
-      "format": "date-time"
-    },
-    "started_overridden_datetime": {
-      "type": ["string", "null"],
-      "format": "date-time"
-    },
-    "finished_overridden_datetime": {
-      "type": ["string", "null"],
-      "format": "date-time"
-    },
-    "estimated_duration": {
-      "type": ["integer", "null"]
-    },
-    "milestone": {
-      "type": "string"
-    },
-    "created_by": {
-      "type": ["string", "null"]
-    },
-    "assigned_to": {
-      "type": ["string", "null"]
-    },
-    "created_from": {
-      "type": ["string", "null"]
-    },
-    "risk_profiles": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": {
+    "properties": {
+        "id": {
             "type": "integer"
-          },
-          "risk_level": {
+        },
+        "_self": {
+            "type": "string",
+            "format": "uri"
+        },
+        "title": {
             "type": "string"
-          },
-          "formula": {
+        },
+        "description": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "project": {
+            "type": "string",
+            "format": "uri"
+        },
+        "status": {
             "type": "string"
-          },
-          "over_run": {
-            "type": "integer"
-          },
-          "task_variance": {
-            "type": "integer"
-          },
-          "cool_down": {
-            "type": "integer"
-          },
-          "reason": {
-            "type": "integer"
-          },
-          "duration": {
-            "type": "integer"
-          },
-          "estimated_duration": {
-            "type": "integer"
-          }
+        },
+        "dependency": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
+        },
+        "start_datetime": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "date-time"
+        },
+        "due_datetime": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "started_datetime": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "date-time"
+        },
+        "finished_datetime": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "date-time"
+        },
+        "started_overridden_datetime": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "date-time"
+        },
+        "finished_overridden_datetime": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "date-time"
+        },
+        "estimated_duration": {
+            "type": [
+                "integer",
+                "null"
+            ]
+        },
+        "milestone": {
+            "type": "string",
+            "format": "uri"
+        },
+        "created_by": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
+        },
+        "assigned_to": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
+        },
+        "created_from": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
+        },
+        "risk_profiles": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "risk_level": {
+                        "type": "string"
+                    },
+                    "formula": {
+                        "type": "string"
+                    },
+                    "over_run": {
+                        "type": "integer"
+                    },
+                    "task_variance": {
+                        "type": "integer"
+                    },
+                    "cool_down": {
+                        "type": "integer"
+                    },
+                    "reason": {
+                        "type": "integer"
+                    },
+                    "duration": {
+                        "type": "integer"
+                    },
+                    "estimated_duration": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "time_entry_list": {
+            "type": "string",
+            "format": "uri"
+        },
+        "attachment_list": {
+            "type": "string",
+            "format": "uri"
+        },
+        "created": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "modified": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "dependencies": {
+            "type": "array"
         }
-      }
     },
-    "time_entry_list": {
-      "type": "string"
-    },
-    "attachment_list": {
-      "type": "string"
-    },
-    "created": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "modified": {
-      "type": "string",
-      "format": "date-time"
-    }
-  }
+    "required": [
+        "title"
+    ],
+    "type": "object"
 }

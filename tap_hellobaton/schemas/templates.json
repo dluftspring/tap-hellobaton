@@ -4,7 +4,8 @@
             "type": "integer"
         },
         "_self": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
         },
         "title": {
             "type": "string"
@@ -16,19 +17,22 @@
             "type": [
                 "string",
                 "null"
-            ]
+            ],
+            "format": "decimal"
         },
         "annual_contract_value": {
             "type": [
                 "string",
                 "null"
-            ]
+            ],
+            "format": "decimal"
         },
         "implementation_budget": {
             "type": [
                 "string",
                 "null"
-            ]
+            ],
+            "format": "decimal"
         },
         "estimated_duration": {
             "type": [
@@ -37,38 +41,65 @@
             ]
         },
         "created_from_template": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
         },
         "created_from": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
         },
         "start_datetime": {
-            "type": ["string", "null"],
+            "type": [
+                "string",
+                "null"
+            ],
             "format": "date-time"
         },
         "started_datetime": {
-            "type": ["string", "null"],
+            "type": [
+                "string",
+                "null"
+            ],
             "format": "date-time"
         },
         "deadline_datetime": {
-            "type": ["string", "null"],
+            "type": [
+                "string",
+                "null"
+            ],
             "format": "date-time"
         },
         "completed_datetime": {
-            "type": ["string", "null"],
+            "type": [
+                "string",
+                "null"
+            ],
             "format": "date-time"
         },
         "client_systems": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ]
         },
         "phase": {
-            "type": ["object", "null"],
+            "type": [
+                "object",
+                "null"
+            ],
             "properties": {
                 "id": {
                     "type": "integer"
                 },
                 "_self": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "uri"
                 },
                 "order": {
                     "type": "integer"
@@ -80,14 +111,33 @@
                 "modified": {
                     "type": "string",
                     "format": "date-time"
+                },
+                "name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             }
         },
         "creator": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
         },
         "task_list": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
+        },
+        "milestone_list": {
+            "type": "string",
+            "format": "uri"
         }
-    }
+    },
+    "required": [
+        "title"
+    ],
+    "type": "object"
 }

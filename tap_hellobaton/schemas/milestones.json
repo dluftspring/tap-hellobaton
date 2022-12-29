@@ -4,28 +4,38 @@
             "type": "integer"
         },
         "_self": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
         },
         "title": {
             "type": "string"
         },
         "description": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ]
         },
         "project": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
         },
         "task_list": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
         },
         "phase": {
-            "type": ["object", "null"],
+            "type": [
+                "object",
+                "null"
+            ],
             "properties": {
                 "id": {
                     "type": "integer"
                 },
                 "_self": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "uri"
                 },
                 "name": {
                     "type": "string"
@@ -37,6 +47,9 @@
                 "modified": {
                     "type": "string",
                     "format": "date-time"
+                },
+                "order": {
+                    "type": "integer"
                 }
             }
         },
@@ -44,7 +57,10 @@
             "type": "boolean"
         },
         "deadline_datetime": {
-            "type": ["string", "null"],
+            "type": [
+                "string",
+                "null"
+            ],
             "format": "date-time"
         },
         "risk_profiles": {
@@ -68,14 +84,24 @@
             }
         },
         "start_datetime": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ]
         },
         "finish_datetime": {
-            "type": ["string", "null"],
+            "type": [
+                "string",
+                "null"
+            ],
             "format": "date-time"
         },
         "created_from": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
         },
         "duration": {
             "type": "integer"
@@ -87,6 +113,15 @@
         "modified": {
             "type": "string",
             "format": "date-time"
+        },
+        "feedback_list": {
+            "type": "string",
+            "format": "uri"
         }
-    }
+    },
+    "required": [
+        "title",
+        "deadline_fixed"
+    ],
+    "type": "object"
 }

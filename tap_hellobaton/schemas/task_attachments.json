@@ -4,19 +4,25 @@
             "type": "integer"
         },
         "_self": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
         },
         "task": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
         },
         "url": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
         },
         "type": {
             "type": "string"
         },
         "label": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ]
         },
         "deliverable": {
             "type": "boolean"
@@ -25,22 +31,42 @@
             "type": "boolean"
         },
         "approved": {
-            "type": ["boolean", "null"]
+            "type": [
+                "boolean",
+                "null"
+            ]
         },
         "revision_task": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
         },
         "original_filename": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ]
         },
         "created_by": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
         },
         "created": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
         },
         "modified": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
         }
-    }
+    },
+    "required": [
+        "url"
+    ],
+    "type": "object"
 }

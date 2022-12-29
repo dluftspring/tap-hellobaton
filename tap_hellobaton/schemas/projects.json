@@ -1,17 +1,25 @@
 {
     "properties": {
-
         "_self": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
         },
         "annual_contract_value": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "decimal"
         },
         "attachment_list": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
         },
         "client_systems": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ]
         },
         "companies": {
             "type": "array",
@@ -20,56 +28,93 @@
             }
         },
         "completed_datetime": {
-            "type": ["string", "null"],
+            "type": [
+                "string",
+                "null"
+            ],
             "format": "date-time"
         },
         "cost": {
-            "type": ["number", "null"]
+            "type": [
+                "number",
+                "null"
+            ],
+            "format": "decimal"
         },
         "created": {
             "type": "string",
             "format": "date-time"
         },
         "created_from": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
         },
         "created_from_template": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
         },
         "creator": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
         },
         "deadline_datetime": {
-            "type": ["string", "null"],
+            "type": [
+                "string",
+                "null"
+            ],
             "format": "date-time"
         },
         "estimated_duration": {
-            "type": ["integer", "null"]
+            "type": [
+                "integer",
+                "null"
+            ]
         },
         "id": {
             "type": "integer"
         },
         "implementation_budget": {
-            "type": "string"
+            "type": "string",
+            "format": "decimal"
         },
         "milestone_list": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
         },
         "modified": {
-            "type": ["string", "null"],
+            "type": [
+                "string",
+                "null"
+            ],
             "format": "date-time"
         },
         "phase": {
-            "type": ["object", "null"],
+            "type": [
+                "object",
+                "null"
+            ],
             "properties": {
                 "id": {
                     "type": "integer"
                 },
                 "_self": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "uri"
                 },
                 "name": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "order": {
                     "type": "integer"
@@ -105,33 +150,65 @@
                         "type": "string"
                     },
                     "projected_golive_datetime": {
-                        "type": ["string", "null"],
+                        "type": [
+                            "string",
+                            "null"
+                        ],
                         "format": "date-time"
                     }
                 }
             }
         },
         "start_datetime": {
-            "type": ["string", "null"],
+            "type": [
+                "string",
+                "null"
+            ],
             "format": "date-time"
         },
         "started_datetime": {
-            "type": ["string", "null"],
+            "type": [
+                "string",
+                "null"
+            ],
             "format": "date-time"
         },
         "status": {
             "type": "string"
         },
         "task_list": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
         },
         "time_entry_list": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
         },
         "title": {
             "type": "string"
+        },
+        "milestone_feedback_list": {
+            "type": "string"
+        },
+        "custom_field_list": {
+            "type": "string",
+            "format": "uri"
+        },
+        "project_user_list": {
+            "type": "string",
+            "format": "uri"
+        },
+        "archived": {
+            "type": "boolean"
+        },
+        "project_phases_list": {
+            "type": "string",
+            "format": "uri"
         }
-
-    }
-
+    },
+    "required": [
+        "title",
+        "risk_profiles"
+    ],
+    "type": "object"
 }

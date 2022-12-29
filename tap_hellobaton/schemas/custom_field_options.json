@@ -4,10 +4,12 @@
             "type": "integer"
         },
         "_self": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
         },
         "field": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
         },
         "value": {
             "type": "string"
@@ -19,7 +21,11 @@
             "type": "boolean"
         },
         "created_by": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
         },
         "created": {
             "type": "string",
@@ -29,5 +35,9 @@
             "type": "string",
             "format": "date-time"
         }
-    }
+    },
+    "required": [
+        "value"
+    ],
+    "type": "object"
 }

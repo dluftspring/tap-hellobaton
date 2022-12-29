@@ -1,4 +1,8 @@
 {
+    "required": [
+        "url"
+    ],
+    "type": "object",
     "properties": {
         "id": {
             "type": "integer"
@@ -7,7 +11,10 @@
             "type": "string",
             "format": "uri"
         },
-        "project": {
+        "type": {
+            "type": "string"
+        },
+        "task": {
             "type": "string",
             "format": "uri"
         },
@@ -15,27 +22,13 @@
             "type": "string",
             "format": "uri"
         },
-        "label": {
-            "type": [
-                "string",
-                "null"
-            ]
-        },
         "created_by": {
             "type": "string",
             "format": "uri"
         },
-        "type": {
-            "type": "string"
-        },
-        "is_sow": {
-            "type": "boolean"
-        },
-        "original_filename": {
-            "type": [
-                "string",
-                "null"
-            ]
+        "project": {
+            "type": "string",
+            "format": "uri"
         },
         "created": {
             "type": "string",
@@ -45,9 +38,5 @@
             "type": "string",
             "format": "date-time"
         }
-    },
-    "required": [
-        "url"
-    ],
-    "type": "object"
+    }
 }

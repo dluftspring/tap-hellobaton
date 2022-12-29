@@ -4,37 +4,55 @@
             "type": "integer"
         },
         "_self": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
         },
         "user": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
         },
         "created_by": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
         },
         "project": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
         },
         "task": {
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
         },
         "rate": {
-            "type": ["object", "null"],
+            "type": [
+                "object",
+                "null"
+            ],
             "properties": {
                 "id": {
                     "type": "integer"
                 },
                 "hourly_rate": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "decimal"
                 }
             }
         },
         "started_at": {
-            "type": ["string", "null"],
+            "type": [
+                "string",
+                "null"
+            ],
             "format": "date-time"
         },
         "ended_at": {
-            "type": ["string", "null"],
+            "type": [
+                "string",
+                "null"
+            ],
             "format": "date-time"
         },
         "reference_date": {
@@ -45,13 +63,23 @@
             "type": "boolean"
         },
         "calculated_duration": {
-            "type": ["integer", "null"]
+            "type": [
+                "integer",
+                "null"
+            ]
         },
         "inputted_duration": {
-            "type": ["integer", "null"]
+            "type": [
+                "integer",
+                "null"
+            ]
         },
         "notes": {
             "type": "string"
         }
-    }
+    },
+    "required": [
+        "billable"
+    ],
+    "type": "object"
 }
