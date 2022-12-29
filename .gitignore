@@ -134,3 +134,6 @@ dmypy.json
 #don't send configs to version control
 .secrets/*
 config.json
+
+#local notebooks directory
+notebooks/

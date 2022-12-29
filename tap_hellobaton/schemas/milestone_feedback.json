@@ -1,32 +1,36 @@
 {
+    "required": [
+        "rating"
+    ],
+    "type": "object",
     "properties": {
-        "id": {
-            "type": "integer"
-        },
         "_self": {
             "type": "string",
             "format": "uri"
         },
-        "author": {
+        "id": {
+            "type": "integer"
+        },
+        "rating": {
+            "type": "integer"
+        },
+        "comment": {
             "type": [
                 "string",
                 "null"
-            ],
-            "format": "uri"
-        },
-        "task": {
-            "type": "string",
-            "format": "uri"
+            ]
         },
         "project": {
             "type": "string",
             "format": "uri"
         },
-        "content": {
-            "type": "string"
+        "milestone": {
+            "type": "string",
+            "format": "uri"
         },
-        "is_internal": {
-            "type": "boolean"
+        "created_by": {
+            "type": "string",
+            "format": "uri"
         },
         "created": {
             "type": "string",
@@ -36,7 +40,5 @@
             "type": "string",
             "format": "date-time"
         }
-    },
-    "required": [],
-    "type": "object"
+    }
 }

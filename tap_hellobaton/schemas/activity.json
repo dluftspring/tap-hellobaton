@@ -1,138 +1,111 @@
 {
-  "properties":
-  {
-    "id":
-    {
-      "type": "integer"
-    },
-    "_self":
-    {
-      "type": "string"
-    },
-    "type":
-    {
-      "type":
-      [
-        "string",
-        "null"
-      ]
-    },
-    "group":
-    {
-      "type": "string"
-    },
-    "parent":
-    {
-      "type":
-      [
-        "string",
-        "null"
-      ]
-    },
-    "child":
-    {
-      "type":
-      [
-        "string",
-        "null"
-      ]
-    },
-    "actor":
-    {
-      "type":
-      [
-        "string",
-        "null"
-      ]
-    },
-    "project":
-    {
-      "type": "string"
-    },
-    "parent_type":
-    {
-      "type":
-      [
-        "string",
-        "null"
-      ]
-    },
-    "child_type":
-    {
-      "type":
-      [
-        "string",
-        "null"
-      ]
-    },
-    "meta":
-    {
-      "type":
-      [
-        "object",
-        "null"
-      ],
-      "properties":
-      {
-        "new_status":
-        {
-          "type":
-          [
-            "integer",
-            "null"
-          ]
+    "properties": {
+        "id": {
+            "type": "integer"
         },
-        "previous_status":
-        {
-          "type":
-          [
-            "integer",
-            "null"
-          ]
+        "_self": {
+            "type": "string",
+            "format": "uri"
         },
-        "new_assignee":
-        {
-          "type":
-          [
-            "integer",
-            "null"
-          ]
+        "type": {
+            "type": [
+                "string",
+                "null"
+            ]
         },
-        "previous_assignee":
-        {
-          "type":
-          [
-            "integer",
-            "null"
-          ]
+        "group": {
+            "type": "string"
         },
-        "new_due_date":
-        {
-          "type":
-          [
-            "date-time",
-            "null"
-          ]
+        "parent": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
         },
-        "previous_due_date":
-        {
-          "type":
-          [
-            "date-time",
-            "null"
-          ]
+        "child": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
+        },
+        "actor": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
+        },
+        "project": {
+            "type": "string",
+            "format": "uri"
+        },
+        "parent_type": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "child_type": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "meta": {
+            "type": [
+                "object",
+                "null"
+            ],
+            "properties": {
+                "new_status": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
+                },
+                "previous_status": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
+                },
+                "new_assignee": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
+                },
+                "previous_assignee": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
+                },
+                "new_due_date": {
+                    "type": [
+                        "date-time",
+                        "null"
+                    ]
+                },
+                "previous_due_date": {
+                    "type": [
+                        "date-time",
+                        "null"
+                    ]
+                }
+            }
+        },
+        "created": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "modified": {
+            "type": "string",
+            "format": "date-time"
         }
-      }
     },
-    "created":
-    {
-      "type": "string",
-      "format": "date-time"
-    },
-    "modified":
-    {
-      "type": "string",
-      "format": "date-time"
-    }
-  }
+    "required": [],
+    "type": "object"
 }

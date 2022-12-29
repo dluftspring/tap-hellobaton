@@ -1,4 +1,6 @@
 {
+    "required": [],
+    "type": "object",
     "properties": {
         "id": {
             "type": "integer"
@@ -11,42 +13,29 @@
             "type": "string",
             "format": "uri"
         },
-        "user": {
+        "phase": {
             "type": "string",
             "format": "uri"
         },
-        "role": {
-            "type": "string"
-        },
-        "joined": {
-            "type": "boolean"
-        },
-        "joined_on": {
+        "start_datetime": {
             "type": [
                 "string",
                 "null"
             ],
             "format": "date-time"
         },
-        "invited": {
-            "type": "boolean"
-        },
-        "invited_on": {
+        "end_datetime": {
             "type": [
                 "string",
                 "null"
             ],
             "format": "date-time"
         },
-        "created": {
-            "type": "string",
-            "format": "date-time"
+        "template_offset_days": {
+            "type": "integer"
         },
-        "modified": {
-            "type": "string",
-            "format": "date-time"
+        "template_duration_days": {
+            "type": "integer"
         }
-    },
-    "required": [],
-    "type": "object"
+    }
 }
