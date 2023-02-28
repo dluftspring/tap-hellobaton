@@ -26,6 +26,9 @@
         "cost": {
             "type": ["number", "null"]
         },
+        "archived": {
+            "type": ["boolean", "null"]
+        },
         "created": {
             "type": "string",
             "format": "date-time"
