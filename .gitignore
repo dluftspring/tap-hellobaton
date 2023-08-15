@@ -134,3 +134,5 @@ dmypy.json
 #don't send configs to version control
 .secrets/*
 config.json
+catalog.json
+state.json
