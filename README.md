@@ -77,6 +77,30 @@ To execute the tap directly from the cli
 tap-hellobaton --config CONFIG_FILE_PATH
 ```
 
+### Executing with Incremental Replication
+Incremental replication means the tap will only query and emit data which was modified since the last import. This is faster than running a full table import. If you are using this tap with Meltano, please read their documentation on [Key-based Incremental Replication](https://docs.meltano.com/guide/integration/#key-based-incremental-replication).
+
+First, generate the `catalog.json` file by running the tap in discovery mode.
+```bash
+tap-hellobaton --config ./config.json --discover > catalog.json
+```
+
+Next, run a full sync and generate the initial state file (`state.json`).
+```bash
+tap-hellobaton --config ./config.json --catalog catalog.json >> state.json
+tail -1 state.json | cut -c 27- | rev | cut -c 2- | rev  > state.json.tmp && mv state.json.tmp state.json
+```
+
+From here, all subsequent syncs can be take advantage of incremental replication by reusing the `state.json` file generated in the previous step. The second line here is important as it will update the `state.json` to reflect the most recent run.
+```bash
+tap-hellobaton --config ./config.json --catalog catalog.json --state state.json >> state.json
+tail -1 state.json | cut -c 27- | rev | cut -c 2- | rev  > state.json.tmp && mv state.json.tmp state.json
+```
+
+Now you may repeat step 3 to continuously sync only the most recently modified data. If you need to do a full sync, delete the `state.json` file and begin from step 1.
+
+More information on how to use incremental replication while piping output to a Target can be found here under [Running a Singer Tap with a Singer Target](https://github.com/singer-io/getting-started/blob/master/docs/RUNNING_AND_DEVELOPING.md#running-a-singer-tap-with-a-singer-target).
+
 ### Running ELT with [Meltano](https://www.meltano.com)
 
 _**Note:** This tap will work in any Singer environment and does not require Meltano.
@@ -88,7 +112,7 @@ First install Meltano (if you haven't already) and any needed plugins. It's reco
 # Install meltano
 pip install meltano
 # Initialize meltano within this directory
-meltano init 
+meltano init
 ```
 
 This will create a new meltano project in your working directory. You can edit the `meltano.yml` file with the following minimal configurations
